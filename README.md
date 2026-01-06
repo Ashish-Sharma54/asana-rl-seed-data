@@ -75,5 +75,5 @@ The repository is organized to clearly separate schema definition, data generati
 - **Separation of concerns:** Each generator handles exactly one entity.
 - **Scalability:** New entities can be added without refactoring existing code.
 - **Reproducibility:** Entire database can be regenerated using a single command.
-- **RL readiness:** Clear entity boundaries simplify RL environment integration.```
+- **RL readiness:** Clear entity boundaries simplify RL environment integration.
 
