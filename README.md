@@ -69,11 +69,11 @@ The repository is organized to clearly separate schema definition, data generati
 │ └── dates.py # Temporal logic and realistic date generation
 │
 └── output/
-└── asana_simulation.sqlite # Final generated SQLite database```
+└── asana_simulation.sqlite # Final generated SQLite database
 
 ### Design Rationale
 - **Separation of concerns:** Each generator handles exactly one entity.
 - **Scalability:** New entities can be added without refactoring existing code.
 - **Reproducibility:** Entire database can be regenerated using a single command.
-- **RL readiness:** Clear entity boundaries simplify RL environment integration.
+- **RL readiness:** Clear entity boundaries simplify RL environment integration.```
 
