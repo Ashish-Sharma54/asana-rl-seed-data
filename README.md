@@ -42,3 +42,31 @@ This schema mirrors real Asana usage patterns in enterprise environments.
 ---
 
 ## Project Structure
+The repository is organized to clearly separate schema definition, data generation logic, utilities, and final outputs. This modular design improves readability, extensibility, and reproducibility.
+asana-rl-seed-data/
+├── README.md # Project overview, setup, and usage
+├── requirements.txt # Python dependencies
+├── schema.sql # Complete SQLite DDL for Asana-like schema
+├── .env.example # Example environment configuration
+│
+├── src/
+│ ├── main.py # Entry point; orchestrates full data generation pipeline
+│ │
+│ ├── generators/ # Entity-wise data generation logic
+│ │ ├── workspace.py # Workspace / organization generation
+│ │ ├── users.py # Users and roles generation
+│ │ ├── teams.py # Teams and team memberships
+│ │ ├── projects.py # Projects under teams
+│ │ ├── sections.py # Workflow sections (To Do / In Progress / Done)
+│ │ ├── tasks.py # Core task generation logic
+│ │ ├── subtasks.py # Hierarchical task breakdown
+│ │ ├── comments.py # Task activity and collaboration
+│ │ └── tags.py # Tags and task-tag associations
+│ │
+│ └── utils/ # Shared helper utilities
+│ ├── config.py # Environment and configuration loader
+│ ├── db.py # SQLite initialization and schema execution
+│ └── dates.py # Temporal logic and realistic date generation
+│
+└── output/
+└── asana_simulation.sqlite # Final generated SQLite database
