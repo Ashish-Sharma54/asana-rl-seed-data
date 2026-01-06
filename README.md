@@ -43,7 +43,7 @@ This schema mirrors real Asana usage patterns in enterprise environments.
 
 ## Project Structure
 The repository is organized to clearly separate schema definition, data generation logic, utilities, and final outputs. This modular design improves readability, extensibility, and reproducibility.
-**asana-rl-seed-data/
+'''asana-rl-seed-data/
 ├── README.md # Project overview, setup, and usage
 ├── requirements.txt # Python dependencies
 ├── schema.sql # Complete SQLite DDL for Asana-like schema
@@ -69,4 +69,11 @@ The repository is organized to clearly separate schema definition, data generati
 │ └── dates.py # Temporal logic and realistic date generation
 │
 └── output/
-└── asana_simulation.sqlite # Final generated SQLite database**
+└── asana_simulation.sqlite # Final generated SQLite database
+
+### Design Rationale
+- **Separation of concerns:** Each generator handles exactly one entity.
+- **Scalability:** New entities can be added without refactoring existing code.
+- **Reproducibility:** Entire database can be regenerated using a single command.
+- **RL readiness:** Clear entity boundaries simplify RL environment integration.
+'''
